@@ -1,4 +1,0 @@
-import time 
-print("hello i am time")
-print("this is another time ")
-print("this is ending line ")
