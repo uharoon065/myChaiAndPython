@@ -1,17 +1,17 @@
- https://realpython.com/python-iterators-iterables/#:~:text=Python%27s%20iterators%20and%20iterables%20are,one%20value%20at%20a%20time.excelent article to learn about iterators and generators nad iterators types 
+#  https://realpython.com/python-iterators-iterables/#:~:text=Python%27s%20iterators%20and%20iterables%20are,one%20value%20at%20a%20time.excelent 
 # clasic iterator 
 class Sequence_iterator :
     def __init__(self,sequence) -> None:
-        self._sequence = sequence
-        self._index = 0
+        self.__sequence = sequence
+        self.__index = 0
 #  must define iter method in order to make the object iterator and work for loops
     def __iter__(self):
         return self
     
     def __next__(self):
-        if self._index < len(self._sequence):
-            item = self._sequence[self._index]
-            self._index += 1
+        if self.__index < len(self.__sequence):
+            item = self.__sequence[self.__index]
+            self.__index += 1
             return item
         else:
             raise StopIteration
