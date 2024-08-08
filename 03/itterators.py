@@ -1,13 +1,16 @@
- https://realpython.com/python-iterators-iterables/#:~:text=Python%27s%20iterators%20and%20iterables%20are,one%20value%20at%20a%20time.excelent article to learn about iterators and generators nad iterators types 
+# all iterators objects are iterable but all iterable object are not iterator object . 
+# iterator  and iterable objects must have dunder method iter , but the iter object must define __next__() method which is to say iter protocole.
+# the loops automatically calls the  iter()  method to make an iterator object if the object is iterable it will return iterator object but if it already is an iterator it iwll return itself 
+""" https://realpython.com/python-iterators-iterables/#:~:text=Python%27s%20iterators%20and%20iterables%20are,one%20value%20at%20a%20time.excelent article to learn about iterators and generators nad iterators types """
 # clasic iterator 
 class Sequence_iterator :
     def __init__(self,sequence) -> None:
         self._sequence = sequence
         self._index = 0
-#  must define iter method in order to make the object iterator and work for loops
+#  must define iter method in order to make the object iterable and work for loops
     def __iter__(self):
         return self
-    
+    #  must define __next__() method to make the  object an iterator object
     def __next__(self):
         if self._index < len(self._sequence):
             item = self._sequence[self._index]
