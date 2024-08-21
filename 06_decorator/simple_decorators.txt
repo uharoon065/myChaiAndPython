@@ -1,0 +1,14 @@
+simple_decorator.py"
+This Python script demonstrates the concept of decorators, which are functions that modify the behavior of other functions.
+1. 
+Basic Decorator: The decorator function wraps another function (unc). It prints messages before and after the wrapped function is called. In this case, say_cow() is wrapped by decorator, altering its behavior to include additional print statements around the original function call.
+2. 
+Time-based Decorator: The dont_disturb_night decorator only allows the wrapped function to execute between 7 AM and 10 PM. If called outside these hours, the function does nothing. This decorator is applied to the say_greet() function, which prints a greeting message.
+3. 
+Pythonic Decorator Syntax: The script also demonstrates the more concise way to apply decorators using the @ syntax. The say_morning() function is decorated with the decorator, which prints messages before and after the function is executed.
+Key Points:
+• Function Wrapping: Decorators wrap functions, modifying their behavior.
+• Dynamic Function Modification: Decorators can alter when or how a function executes, based on conditions or added logic.
+• Pythonic Syntax: The @decorator syntax is a shorthand for applying decorators to functions in a clear and readable way.
+This script highlights how decorators can be used to dynamically modify the behavior of functions in Python, both with and without arguments.
+
