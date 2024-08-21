@@ -17,3 +17,4 @@ https://docs.python.org/3/library/stdtypes.html#dict
 
 #readme for func
 (https://github.com/hiteshchoudhary/chai-aur-python/blob/main/05_functions/questions.md)
+#decorators article link on real python
