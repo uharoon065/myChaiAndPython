@@ -15,3 +15,9 @@ def say_evening(name):
 #  case 2
 # say_fairwell()
 # say_evening("usman")
+
+#  example 3
+@do_twice
+def  fav_fruit(name):
+    return f"my favorite fruit is {name}"
+print(fav_fruit("mango"))
