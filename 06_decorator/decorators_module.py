@@ -7,6 +7,7 @@ def do_twice(func):
     def wrapper_do_twice(*args,**kwargs):
         # func(name)
         # func(name)
+        print("inside do_twice_wrapper")
 
         func(*args,**kwargs)
         return func(*args,**kwargs)

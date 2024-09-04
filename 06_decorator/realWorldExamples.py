@@ -3,6 +3,7 @@ import math
 import time
 #  timer  decorator
 def timer(func):
+    print(" a timer decorator")
     @wraps(func)
     def  wrapper_timer(*args,**kwargs):
         start_time = time.perf_counter()
@@ -12,7 +13,7 @@ def timer(func):
         return value
     return wrapper_timer
 
-@timer
+# @timer
 def waste_time(number_loops):
     for i in range(number_loops +1):
         sum(num**2 for num in range(10_000))
@@ -20,6 +21,7 @@ def waste_time(number_loops):
 #  example 2
 def debug(func):
     """prints the function signature and its return value"""
+    print(" a debug decorator")
     @wraps(func)
     def wrapper_debug(*args,**kwargs):
         repr_args  = [repr(a)  for a in args ]
@@ -32,7 +34,7 @@ def debug(func):
     return wrapper_debug
 
 
-@debug
+# @debug
 def make_greeting(name,age=None):
     if not age:
         return f"hello {name }"
@@ -46,7 +48,7 @@ def make_greeting(name,age=None):
 # note that you  cant use  this decorator with readonly functions 
 #  The following example calculates an approximation of themathematical constant e:
 
-math.factorial = debug(math.factorial)
+# math.factorial = debug(math.factorial)
 def approximate_e(terms=18):
     return sum(1 / math.factorial(n) for n in range(terms))
 
@@ -72,4 +74,4 @@ def count_down(n=0):
         print(f"the count down is at {n}")
     count_down(n-1)
 
-count_down(5)
+# count_down(5)
